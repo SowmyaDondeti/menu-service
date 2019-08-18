@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pidiam
+    username: postgres
+    password: 123456
+    hikari:
+      maximum-pool-size: 20
+      connection-timeout: 20000
+  jpa:
+    properties:
+      hibernate:
+        jdbc.lob.non_contextual_creation: true
+
