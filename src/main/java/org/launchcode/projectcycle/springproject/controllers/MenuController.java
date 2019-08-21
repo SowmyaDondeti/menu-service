@@ -18,7 +18,7 @@ public class MenuController {
     public MenuController(MenuRepository menuRepository) {
         this.menuRepository = menuRepository;
     }
-    @CrossOrigin(origins ={"https://restaurant-menu-ui.herokuapp.com", "http://localhost:3000"})
+    @CrossOrigin(origins ="https://restaurant-menu-ui.herokuapp.com")
     @GetMapping("get")
     public List<Menu> getMenu() {
 
