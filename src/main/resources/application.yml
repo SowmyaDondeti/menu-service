@@ -13,7 +13,7 @@ spring.h2.console.settings.trace: false
 ## Enable H2 Console on Heroku mayhaps?
 spring.h2.console.settings.web-allow-others: true
 
-spring.datasource.initialize: false
+spring.datasource.initialize: true
 spring.jpa.hibernate.ddl-auto: update
 
 ##########################################
