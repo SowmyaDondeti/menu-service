@@ -24,8 +24,11 @@ public class MenuController {
 
         return  menuRepository.getMenu().stream().map(this::toMenu).collect(Collectors.toList());
     }
+
+    @CrossOrigin(origins ={"https://restaurant-menu-ui.herokuapp.com", "http://localhost:3000"})
     @PostMapping
     public Menu createMenu(@RequestBody Menu menu) {
+    System.out.println(menu.getName());
         return toMenu(menuRepository.createMenu(toMenuEntity(menu)));
     }
     @PutMapping
@@ -50,6 +53,9 @@ public class MenuController {
                 .description(menuEntity.getDescription())
                 .pictureUrl(menuEntity.getPictureUrl())
                 .price(menuEntity.getPrice())
+                .category(menuEntity.getCategory())
+                .type(menuEntity.getType())
+                .spiceLevel(menuEntity.getSpiceLevel())
                 .build();
 
     }
@@ -60,6 +66,9 @@ public class MenuController {
                 .description(menu.getDescription())
                 .pictureUrl(menu.getPictureUrl())
                 .price(menu.getPrice())
+                .category(menu.getCategory())
+                .type(menu.getType())
+                .spiceLevel(menu.getSpiceLevel())
                 .build();
     }
 }

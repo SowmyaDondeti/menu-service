@@ -19,5 +19,11 @@ public class Menu
     private Float price;
 
     private String pictureUrl;
+
+    private String category;
+
+    private String type;
+
+    private String spiceLevel;
 }
 

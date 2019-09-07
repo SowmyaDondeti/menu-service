@@ -20,4 +20,7 @@ public class MenuEntity {
     private String description;
     private Float price;
     private String pictureUrl;
+    private String category;
+    private String type;
+    private String spiceLevel;
 }
