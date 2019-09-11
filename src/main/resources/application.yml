@@ -26,7 +26,8 @@ spring.jpa.hibernate.ddl-auto: update
   # PC:
   #   spring.datasource.url = jdbc:h2:file:C:/yourprojectdirectory/db
 
-spring.datasource.url: jdbc:h2:file:C:/codergirl2019/final-project/menu-service/db
+spring.datasource.url: jdbc:h2:./vcs-db
+#  file:C:/codergirl2019/final-project/menu-service/db
 #delete file & replace with '.' .mv file
 #spring:
 #  datasource:
