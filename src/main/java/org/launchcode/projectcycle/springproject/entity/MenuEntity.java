@@ -23,4 +23,5 @@ public class MenuEntity {
     private String category;
     private String type;
     private String spiceLevel;
+
 }

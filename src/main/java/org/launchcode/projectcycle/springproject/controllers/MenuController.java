@@ -41,6 +41,9 @@ public class MenuController {
                         .price(menu.getPrice())
                         .description(menu.getDescription())
                         .pictureUrl(menu.getPictureUrl())
+                        .category(menu.getCategory())
+                        .type(menu.getType())
+                        .spiceLevel(menu.getSpiceLevel())
                         .build())
                 .orElseThrow(() -> new RuntimeException("Menu not found to update"));
         return toMenu(menuRepository.updateMenu(updatedMenu));
