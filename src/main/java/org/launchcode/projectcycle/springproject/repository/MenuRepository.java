@@ -23,7 +23,6 @@ public class MenuRepository {
     }
 
     public List<MenuEntity> getMenu() {
-    System.out.println("Hi");
         TypedQuery<MenuEntity> query = entityManager.createQuery("from MenuEntity", MenuEntity.class);
         return query.getResultList();
 
