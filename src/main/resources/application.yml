@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://ec2-54-235-114-242.compute-1.amazonaws.com:5432/dcot965evq0jls
     username: hubrnjmhpvqcon
-    password: 876a1b9c57d3fb3e14b617831de25ccf5567221fd3a5a538eade6e3d079b5c7b
+    password: ${POSTGRES_PASSWORD}
     hikari:
       maximum-pool-size: 20
       connection-timeout: 20000
@@ -11,7 +11,3 @@ spring:
       hibernate:
         jdbc.lob.non_contextual_creation: true
 
-#
-#-Dspring:
-#  profiles:
-#    active=local:
