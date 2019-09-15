@@ -1,7 +1,6 @@
 package org.launchcode.projectcycle.springproject.repository;
 
 import org.launchcode.projectcycle.springproject.entity.MenuEntity;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -12,13 +11,11 @@ import java.util.Optional;
 
 @Repository
 public class MenuRepository {
-    private final NamedParameterJdbcTemplate jdbcTemplate;
     @PersistenceContext
     private final EntityManager entityManager;
 
 
-    public MenuRepository(NamedParameterJdbcTemplate jdbcTemplate, EntityManager entityManager) {
-        this.jdbcTemplate = jdbcTemplate;
+    public MenuRepository(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
