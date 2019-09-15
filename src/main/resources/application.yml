@@ -1,44 +1,17 @@
-# Connection information
-spring.datasource.driverClassName: org.h2.Driver
-spring.datasource.username: sa
-spring.datasource.password:
-spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-54-235-114-242.compute-1.amazonaws.com:5432/dcot965evq0jls
+    username: hubrnjmhpvqcon
+    password: 876a1b9c57d3fb3e14b617831de25ccf5567221fd3a5a538eade6e3d079b5c7b
+    hikari:
+      maximum-pool-size: 20
+      connection-timeout: 20000
+  jpa:
+    properties:
+      hibernate:
+        jdbc.lob.non_contextual_creation: true
 
-# Enabling H2 Console
-spring.h2.console.enabled: true
-spring.h2.console.path: /h2
-
-spring.h2.console.settings.trace: false
-
-## Enable H2 Console on Heroku mayhaps?
-spring.h2.console.settings.web-allow-others: true
-
-spring.datasource.initialize: true
-spring.jpa.hibernate.ddl-auto: update
-
-##########################################
-# Connection string
-##########################################
-
-  # Persistent data storage
-  # Mac:
-  #   spring.datasource.url = jdbc:h2:file:/yourprojectdirectory/db
-  # PC:
-  #   spring.datasource.url = jdbc:h2:file:C:/yourprojectdirectory/db
-
-spring.datasource.url: jdbc:h2:./vcs-db
-#  file:C:/codergirl2019/final-project/menu-service/db
-#delete file & replace with '.' .mv file
-
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://ec2-54-235-114-242.compute-1.amazonaws.com:5432/dcot965evq0jls
-#    username: hubrnjmhpvqcon
-#    password: 876a1b9c57d3fb3e14b617831de25ccf5567221fd3a5a538eade6e3d079b5c7b
-#    hikari:
-#      maximum-pool-size: 20
-#      connection-timeout: 20000
-#  jpa:
-#    properties:
-#      hibernate:
-#        jdbc.lob.non_contextual_creation: true
+#
+#-Dspring:
+#  profiles:
+#    active=local:

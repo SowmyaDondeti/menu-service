@@ -1,15 +1,30 @@
+# Connection information
+spring.datasource.driverClassName: org.h2.Driver
+spring.datasource.username: sa
+spring.datasource.password:
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
 
+# Enabling H2 Console
+spring.h2.console.enabled: true
+spring.h2.console.path: /h2
 
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/pidiam
-#    username: postgres
-#    password: 123456
-#    hikari:
-#      maximum-pool-size: 20
-#      connection-timeout: 20000
-#  jpa:
-#    properties:
-#      hibernate:
-#        jdbc.lob.non_contextual_creation: true
-#
+spring.h2.console.settings.trace: false
+
+## Enable H2 Console on Heroku mayhaps?
+spring.h2.console.settings.web-allow-others: true
+
+spring.datasource.initialize: true
+spring.jpa.hibernate.ddl-auto: update
+
+  ##########################################
+  # Connection string
+  ##########################################
+
+  # Persistent data storage
+
+  # PC:
+#   spring.datasource.url = jdbc:h2:file:C:/yourprojectdirectory/db
+
+spring.datasource.url: jdbc:h2:file:C:/codergirl2019/final-project/menu-service/db
+#  file:C:/codergirl2019/final-project/menu-service/db
+#delete file & replace with '.' .mv file
