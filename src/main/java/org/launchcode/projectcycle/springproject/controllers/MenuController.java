@@ -33,7 +33,7 @@ public class MenuController {
     }
     @PutMapping
     @RequestMapping("{id}")
-
+    @CrossOrigin(origins ={"https://restaurant-menu-ui.herokuapp.com","http://localhost:3000"})
     public Menu updateMenu(@PathVariable("id") Long id, @RequestBody Menu menu) {
         MenuEntity updatedMenu = menuRepository.findById(id)
                 .map(toUpdate -> toUpdate.toBuilder()
