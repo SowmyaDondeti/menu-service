@@ -31,9 +31,9 @@ public class MenuController {
     System.out.println(menu.getName());
         return toMenu(menuRepository.createMenu(toMenuEntity(menu)));
     }
-    @PutMapping
-    @RequestMapping("{id}")
-    @CrossOrigin(origins ={"https://restaurant-menu-ui.herokuapp.com","http://localhost:3000"})
+
+    @CrossOrigin(origins ={"https://restaurant-menu-ui.herokuapp.com", "http://localhost:3000"})
+    @PutMapping("{id}")
     public Menu updateMenu(@PathVariable("id") Long id, @RequestBody Menu menu) {
         MenuEntity updatedMenu = menuRepository.findById(id)
                 .map(toUpdate -> toUpdate.toBuilder()
