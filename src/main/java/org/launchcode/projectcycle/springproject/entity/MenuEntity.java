@@ -12,16 +12,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MenuEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
-    private Long id;
-    private String name;
-    private String description;
-    private Float price;
-    private String pictureUrl;
-    private String category;
-    private String type;
-    private String spiceLevel;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @EqualsAndHashCode.Include
+  private Long id;
 
+  private String name;
+  private String description;
+  private Float price;
+  private String pictureUrl;
+  private String category;
+  private String type;
+  private String spiceLevel;
 }
